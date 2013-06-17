@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5.0" client="site" method="upgrade">
+  <name>bootstrap_carousel</name>  
+  <author>Fabian Manzano</author>
+  <creationDate>December 2012</creationDate>
+  <copyright>Copyright (C)2012 Fabian Manzano</copyright>
+  <license>GNU General Public License version 2 or later</license>
+  <authorEmail>manzanofab@hotmail.com</authorEmail>
+  <authorUrl>www.fabianmanzano.info</authorUrl>
+  <version>1.0</version>
+  <description>Bootstrap Carousel for Joomla 2.5 and 3.x</description>
+  <files>
+    <filename module="mod_bootstrap_carousel">mod_bootstrap_carousel.php</filename>
+    <filename>index.html</filename>
+	<filename>helper.php</filename>
+	<filename>mod_bootstrap_carousel.php</filename>
+	<filename>mod_bootstrap_carousel.xml</filename>
+	<folder>language</folder>
+	<folder>tmpl</folder>
+  </files>
+  <config>
+		<fields name="params">
+			<fieldset name="basic" addrulepath="modules/mod_joompro_articles_author">
+<field
+                        name="folder"
+                        type="text"
+                        label="MOD_BOOTSTRAP_CAROUSEL_FOLDER_SELECTION"
+                        description="MOD_BOOTSTRAP_CAROUSEL_FOLDER_SELECTION_DESC"
+                        size="40"
+                        class="inputbox validate-greeting"
+                        required="true"
+                        default=""
+                />				
+<field
+					name="Image_Name"
+					type="radio"
+					default="1"
+					label="MOD_BOOTSTRAP_CAROUSEL_IMAGE_NAME"
+					description="MOD_BOOTSTRAP_CAROUSEL_IMAGE_NAME_DESC">
+					<option
+						value="1">JYES</option>
+					<option
+						value="0">JNO</option>
+				</field>
+
+<field
+					name="arrow"
+					type="radio"
+					default="1"
+					label="MOD_BOOTSTRAP_CAROUSEL_ARROWS"
+					description="MOD_BOOTSTRAP_CAROUSEL_ARROWS_DESC">
+					<option
+						value="1">JYES</option>
+					<option
+						value="0">JNO</option>
+				</field>
+<field
+                        name="speed"
+                        type="text"
+                        label="MOD_BOOTSTRAP_CAROUSEL_SPEED"
+                        description="MOD_BOOTSTRAP_CAROUSEL_SPEED_DESC"
+                        size="40"
+                        class="inputbox validate-greeting"
+                        default="0"
+                />								
+
+				
+			</fieldset>
+		</fields>
+	</config>
+</extension>
+
