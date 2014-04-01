@@ -11,40 +11,31 @@ JLoader::register('ContentHelperRoute', JPATH_SITE.'/components/com_content/help
 
 class modbootstrap_carouselHelper
 {
-public static function validation(&$params)
-		{
-			$folder_name = $params->get('folder');
-			$files = glob("images/".$folder_name."/*.*");
-			$b = count($files);
-			if ($b==0) 
-			{
-				//return false;
-				$check = null;
-			}
-			else
-			{
-				//check that there is at least 1 image;
-				$cont = 0;
-				for ($i=0; $i<$b; $i++) 
-					{ 
-					$image = $files[$i];
-					list($width, $height) = getimagesize($image);
-						if (is_numeric($width)) 
-						{		
-							$cont++;
-						}
-				}
-				if ($count=0)
-					{
-						$check = null;
-					}
-				else
-					{
-						$check = $cont;
-//						echo $check;
-					}
-			}
-			return $check;
+    public static function validation(&$params)
+    {
+        $folder_name = $params->get('folder');
+        $files = glob("images/".$folder_name."/*.*");
+        $num_files = count($files);
+        if ($num_files==0) {
+            return null;
+        } else {
+            //check that there is at least 1 image;
+            $counter = 0;
+            for ($i=0; $i<$num_files; $i++)
+            {
+                $image = $files[$i];
+                list($width, $height) = getimagesize($image);
+                if (is_numeric($width))
+                {
+                    $counter++;
+                }
+            }
+            if ($count=0){
+                return null;
+            } else {
+                return $counter;
+            }
+        }
 
-		}
+    }
 }	//class ends

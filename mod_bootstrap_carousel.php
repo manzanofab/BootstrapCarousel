@@ -17,6 +17,6 @@ JHTML::stylesheet('modules/mod_bootstrap_carousel/extra/custom.css');
 
 //JHTML::stylesheet('modules/mod_Fab_Gallery/extras/style.css');
 
-$a = modbootstrap_carouselHelper::validation($params); //I need to do this if I want to bring the value that i get from my 
+$check_folder = modbootstrap_carouselHelper::validation($params); //I need to do this if I want to bring the value that i get from my
 $layout = $params->get('layout', 'default');//I dont understand 'layout for'
 require JModuleHelper::getLayoutPath('mod_bootstrap_carousel', $layout);
